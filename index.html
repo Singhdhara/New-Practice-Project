@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Vite App</title>
 </head>
 
@@ -61,6 +62,7 @@
 
 
   <section class="absolute top-0">
+    <div class="cursor-dot"></div>
 
 
     <div class="cities slideshow screen-height" data-js="city-slider" data-transition="">
@@ -156,23 +158,16 @@
 
 
         <div class="arrows">
-          <div class="arrow prev" style="opacity: 1; transform: translate3d(0px, 0px, 0px);">
-            <!-- <span class="svg svg-arrow-left">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26" enable-background="new 0 0 30 26">
-                <path
-                  d="M13 26c-.3 0-.5-.1-.7-.3l-12-12c-.4-.4-.4-1 0-1.4l12-12c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-11.3 11.3 11.3 11.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3z" />
-                <path class="arrow__line" d="M29.9 13.1h-28.4" />
-              </svg>
-            </span> -->
+          <div onmousemove="myMoveFunction()" class="arrow prev custom_nav">
+            <span class="svg svg-arrow-left">
+              <i class="fa-solid fa-arrow-left text-white bg-[#817553] p-8 text-[25px] rounded-full"></i>
+
+            </span>
           </div>
-          <div class="arrow next" style="opacity: 1; transform: translate3d(0px, 0px, 0px);">
-            <!-- <span class="svg svg-arrow-right">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26" enable-background="new 0 0 30 26">
-                <path
-                  d="M16.9 0c.3 0 .5.1.7.3l12 12c.4.4.4 1 0 1.4l-12 12c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l11.3-11.3-11.3-11.3c-.4-.4-.4-1 0-1.4.2-.2.5-.3.7-.3z" />
-                <path class="arrow__line" d="M0 12.9h28.5" />
-              </svg>
-            </span> -->
+          <div class="arrow next custom_nav">
+            <span class="svg svg-arrow-right">
+              <i class="fa-solid fa-arrow-right text-white bg-[#817553] p-8 text-[25px] rounded-full"></i>
+            </span>
           </div>
         </div>
       </div>
@@ -188,11 +183,8 @@
         </ul>
       </div>
     </div>
-    <div class="cursor" id="cursor"></div>
 
-    <div class="target">
-
-    </div>
+  
 
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
